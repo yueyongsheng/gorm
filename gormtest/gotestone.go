@@ -35,6 +35,7 @@ type Blog struct {
 	Upvotes int32
 }
 
+// Run
 func Run(db *gorm.DB) {
 	// 自动迁移
 	db.AutoMigrate(&User{}, &Member{}, &Blog{})
