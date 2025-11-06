@@ -35,7 +35,6 @@ type Blog struct {
 	Upvotes int32
 }
 
-// Run
 func Run(db *gorm.DB) {
 	// 自动迁移
 	db.AutoMigrate(&User{}, &Member{}, &Blog{})
@@ -46,6 +45,8 @@ func Run(db *gorm.DB) {
 
 	// 创建一个会员
 	member := Member{}
+	//数据库创建
 	db.Create(&member)
 	db.Create(&user)
+
 }
