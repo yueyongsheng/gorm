@@ -45,7 +45,7 @@ func Run(db *gorm.DB) {
 	// 2. 查询工资最高的员工
 	queryHighestSalary(sqlxDB)
 
-	fmt.Println("========== Sqlx 查询示例执行完毕 ==========\n")
+	fmt.Println("========== Sqlx 查询示例执行完毕 ==========")
 }
 
 // initEmployeesTable 初始化员工表和数据
