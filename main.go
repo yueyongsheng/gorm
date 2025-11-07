@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gorm/gormSqlTwo"
+	advancedone "gorm/gormAdvanced"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -14,9 +14,12 @@ func main() {
 	if err != nil {
 		fmt.Printf("警告: 数据库连接失败: %v\n", err)
 	} else {
-		// 调用 gormtest 包中的函数执行数据库操作
-		//gormSql.Run(db)
-		gormSqlTwo.Run(db)
+
+		//gormSql.Run(db)//基本CRUD操作
+		//gormSqlTwo.Run(db)//事务语句
+		//sqlxone.Run(db)//Sqlx题目一
+		//sqlxtwo.Run(db) //Sqlx题目二
+		advancedone.Run(db) //进阶gorm
 		//fmt.Println("数据库操作执行完毕")
 	}
 }
