@@ -1,4 +1,4 @@
-module github.com/test/init_project
+module gorm
 
 go 1.25.3
 

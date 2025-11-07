@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"gorm/gormSqlTwo"
 
-	gormtest "github.com/test/init_project/gormtest"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -15,7 +15,8 @@ func main() {
 		fmt.Printf("警告: 数据库连接失败: %v\n", err)
 	} else {
 		// 调用 gormtest 包中的函数执行数据库操作
-		gormtest.Run(db)
+		//gormSql.Run(db)
+		gormSqlTwo.Run(db)
 		//fmt.Println("数据库操作执行完毕")
 	}
 }
